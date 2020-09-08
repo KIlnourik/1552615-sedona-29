@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ильнур Курмандаев](https://up.htmlacademy.ru/htmlcss/29/user/1552615).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Русяева] (https://htmlacademy.ru/profile/vanillawulf).
 
 ---
 
