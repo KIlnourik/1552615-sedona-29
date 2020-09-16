@@ -1,0 +1,156 @@
+:root{
+    --basic-white: #ffffff;
+    --transparent-white: rgba(255, 255, 255, 0.9);
+    --sky-blue: #81B3D2;
+    --light-gray: #EEEEEE;
+    --basic-brown: #766357;
+    --basic-gray: #F2F2F2;
+    --dark-gray: #888888;
+    --darker-gray: #666666;
+    --darkest-gray: #333333;
+    --basic-black: #000000;
+}
+.page{
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    
+}
+.page-body{
+    background-color: var(--basic-white);
+    min-width: 1200px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "PT Sans", Arial, sans-serif;
+    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2); 
+}
+
+/* Шапка с навигацией */
+.main-header-logo{
+    align-items: center;
+}
+.nav{
+    list-style: none;
+    text-align: center;
+}
+.nav-item a{
+    align-items: center;
+    text-align: center;
+    color: var(--basic-black);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    text-decoration: none;
+}
+.nav-item a:hover{
+    color: var(--sky-blue);
+}
+.nav-item a:active{
+    opacity: 0.3;
+}
+/* Контентная часть */
+.container{
+    margin: 0 auto;
+}
+.main-background-img-field{
+    background: var(--darker-gray) ; 
+    width: 100%;
+    height: 509px;
+}
+.text-intro{
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+}
+/* Список причин посещения Седоны */
+.reasons-list{
+    padding-left: 0;
+    list-style: none;
+}
+.reasons-item{
+    background-color: var(--light-gray);
+}
+.reasons-item-header{
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--basic-black);
+}
+.reason-text{
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--darkest-gray);
+}
+.first-reason-box,
+.second-reason-box{
+    background-color: var(--sky-blue);
+    align-self: center;
+}
+.white-header,
+.white-text{
+    color: var(--basic-white);
+}
+.first-reason-img-field,
+.second-reason-img-field{
+    width: 800px;
+    height: 256px;
+    background-color: var(--darker-gray);
+}
+/* .other-reasons
+{
+    background-color: var(--light-gray);
+} */
+/* Блок с поиском гостиницы */
+.hotel-search-text{
+    line-height: 24px;
+    color: var(--basic-black);
+}
+.hotel-search-text-interested{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--basic-black);
+}
+.form-opening-button{
+    width: 568px;
+    height: 86px;
+    background-color: var(--basic-brown);
+    align-self: center;
+}
+.search-button{
+    width: 458px;
+    height: 58px;
+    background-color: var(--sky-blue);
+    color: var(--basic-white);
+}
+.google-map{
+    width: 100%;
+}
+
+/* Подвал */
+
+.page-footer{
+    background-color: var(--transparent-white);
+}
+.footer-contact{
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    color: var(--basic-black);
+}
+.footer-phone{
+    text-decoration: none;
+    color: var(--basic-black);
+}
+.footer-socials-list{
+    padding: 0;
+    list-style: none;
+}
+.footer-copyright-text{
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-black);
+}
