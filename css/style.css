@@ -25,6 +25,8 @@
     text-transform: uppercase;
     text-align: center;
     font-family: "PT Sans", Arial, sans-serif;
+    font-size: 21px;
+    line-height: 26px;
     box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2); 
 }
 
@@ -42,7 +44,6 @@
     color: var(--basic-black);
     font-weight: bold;
     font-size: 14px;
-    line-height: 26px;
     text-decoration: none;
 }
 .nav-item a:hover{
@@ -62,8 +63,6 @@
 }
 .text-intro{
     font-weight: bold;
-    font-size: 21px;
-    line-height: 26px;
     text-align: center;
 }
 /* Список причин посещения Седоны */
@@ -76,13 +75,11 @@
 }
 .reasons-item-header{
     font-weight: bold;
-    font-size: 21px;
     line-height: 21px;
     color: var(--basic-black);
 }
 .reason-text{
     font-size: 14px;
-    line-height: 21px;
     color: var(--darkest-gray);
 }
 .first-reason-box,
@@ -100,10 +97,6 @@
     height: 256px;
     background-color: var(--darker-gray);
 }
-/* .other-reasons
-{
-    background-color: var(--light-gray);
-} */
 /* Блок с поиском гостиницы */
 .hotel-search-text{
     line-height: 24px;
@@ -137,8 +130,6 @@
 }
 .footer-contact{
     font-weight: bold;
-    font-size: 21px;
-    line-height: 26px;
     color: var(--basic-black);
 }
 .footer-phone{
@@ -151,6 +142,5 @@
 }
 .footer-copyright-text{
     font-size: 14px;
-    line-height: 26px;
     color: var(--basic-black);
 }
