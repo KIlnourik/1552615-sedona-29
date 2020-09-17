@@ -38,7 +38,7 @@
     list-style: none;
     text-align: center;
 }
-.nav-item a{
+.nav-item{
     align-items: center;
     text-align: center;
     color: var(--basic-black);
@@ -46,10 +46,10 @@
     font-size: 14px;
     text-decoration: none;
 }
-.nav-item a:hover{
+.nav-item:hover{
     color: var(--sky-blue);
 }
-.nav-item a:active{
+.nav-item:active{
     opacity: 0.3;
 }
 /* Контентная часть */
@@ -78,14 +78,21 @@
     line-height: 21px;
     color: var(--basic-black);
 }
-.reason-text{
+.reasons-caption{
+    line-height: 26px;
+}
+.reasons-text{
     font-size: 14px;
+    line-height: 21px;
     color: var(--darkest-gray);
 }
 .first-reason-box,
 .second-reason-box{
     background-color: var(--sky-blue);
     align-self: center;
+}
+.first-reason-item{
+    background-color: var(--basic-white);
 }
 .white-header,
 .white-text{
@@ -99,6 +106,7 @@
 }
 /* Блок с поиском гостиницы */
 .hotel-search-text{
+    font-size: 14px;
     line-height: 24px;
     color: var(--basic-black);
 }
