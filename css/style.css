@@ -1,9 +1,15 @@
 :root{
+    --transparent-color: rgba(255, 255, 255, 0);
     --basic-white: #ffffff;
     --transparent-white: rgba(255, 255, 255, 0.9);
+    --transparent-white-30: rgba(255, 255, 255, 0.3);
     --sky-blue: #81B3D2;
+    --deeper-blue: #669EC0;
+    --basic-blue: #5496BD;
     --light-gray: #EEEEEE;
     --basic-brown: #766357;
+    --darker-brown: #604E43;
+    --darkest-brown: #503E33;
     --basic-gray: #F2F2F2;
     --dark-gray: #888888;
     --darker-gray: #666666;
@@ -35,6 +41,7 @@
     align-items: center;
 }
 .nav{
+    padding: 0;
     list-style: none;
     text-align: center;
 }
@@ -118,12 +125,17 @@
 .form-opening-button{
     width: 568px;
     height: 86px;
+    font-weight: bold;
+    text-transform: uppercase;
     background-color: var(--basic-brown);
+    color: var(--basic-white);
     align-self: center;
 }
 .search-button{
     width: 458px;
     height: 58px;
+    text-transform: uppercase;
+    font-weight: bold;
     background-color: var(--sky-blue);
     color: var(--basic-white);
 }
@@ -151,4 +163,155 @@
 .footer-copyright-text{
     font-size: 14px;
     color: var(--basic-black);
+}
+
+/* Внутренняя страница*/ 
+/* Фильтр гостиниц */
+.hotels-nav-item{
+    color: var(--basic-brown);
+}
+.hotels-filter-wrapper{
+    background-color:var(--darker-gray);
+    width: 100%;
+    height: auto;
+}
+.hotels-filter-list-heading{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--basic-white);
+}
+.hotels-filter-list{
+    list-style: none;
+    padding: 0;
+    color: var(--basic-white);
+}
+.hotels-filter-option{
+    font-size: 14px;
+    line-height: 21px;
+}
+.price-filter{
+    color: var(--basic-white);
+}
+.price-filter-range-label{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+}
+.min-price-val,
+.max-price-val{
+    display: inline-block;
+    width: 159px;
+    height: 36px;
+    border: 2px solid var(--basic-white);
+}
+.max-price-val{
+    width: 156px;
+}
+.show-results-button{
+    padding: 7px 35px 8px 36px;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--transparent-color);
+    border: 2px solid var(--basic-white);
+}
+.show-results-button:hover{
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+/* Блок с результатами примененного фильтра */
+.hotels-results-list-heading{
+    font-size: 12px;
+    line-height: 18px;
+}
+.hotels-filter-result-sort-list{
+    list-style: none;
+    padding: 0;
+}
+.hotels-filter-result-sort-item{
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration: underline dashed var(--sky-blue);
+    opacity: 0.3
+}
+.hotels-filter-result-sort-item:hover{
+    color: var(--sky-blue);
+    opacity: 1;
+}
+.hotels-filter-result-sort-item:active{
+    color: var(--basic-black);
+    opacity: 1;
+    text-decoration: none;
+}
+.hotels-filter-result-list{
+    list-style: none;
+    padding: 0;
+}
+.hotels-image-box{
+    background-color: var(--darker-gray);
+    width: 135px;
+    height: 90px;
+}
+.hotels-name-link{
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-decoration: none;
+    color: var(--basic-black);
+}
+.hotels-filter-result-text{
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--darkest-gray);
+}
+.hotels-rating-box{
+    width: 110px;
+    height: 27px;
+    background-color: var(--basic-gray);
+
+}
+.hotels-rating{
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--darker-gray);
+    margin: 0;
+    padding: 3px 12px 3px 15px;
+}
+.more-details{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: var(--sky-blue);
+    padding: 3px 16px 3px 17px;
+    text-decoration: none;
+    color: var(--basic-white);
+}
+.to-book-hotels{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: var(--basic-brown);
+    padding: 3px 16px 3px 17px;
+    text-decoration: none;
+    color: var(--basic-white);
+}
+.more-details:hover,
+.search-button:hover{
+    background-color: var(--deeper-blue);
+}
+.to-book-hotels:hover,
+.form-opening-button:hover{
+    background-color: var(--darker-brown);
+}
+.more-details:active,
+.search-button:active{
+    background-color: var(--basic-blue);
+    color: var(--transparent-white-30);
+}
+.to-book-hotels:active,
+.form-opening-button:active{
+    background-color: var(--darkest-brown);
+    color: var(--transparent-white-30);
 }
