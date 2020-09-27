@@ -51,19 +51,28 @@
   overflow: hidden;
 }
 
-/* Шапка с навигацией */
-.main-header-nav{
-  display: grid;
-
+.container {
+  margin: 0 auto;
 }
+
+/* Шапка с навигацией */
+.main-header-nav {
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 1;
+}
+
 .main-header-logo {
   align-items: center;
+  z-index: 2;
+  grid
 }
 
 .nav {
   padding: 0;
   list-style: none;
   text-align: center;
+  z-index: 1;
 }
 
 .nav-item {
@@ -84,13 +93,11 @@
 }
 
 /* Контентная часть */
-.container {
-  margin: 0 auto;
-}
+
 
 .main-background-img-field {
   background: var(--darker-gray);
-  width: 100%;
+  min-width: 1200px;
   height: 509px;
 }
 
@@ -170,7 +177,7 @@
   align-self: center;
 }
 
-.hotel-search-form{
+.hotel-search-form {
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
