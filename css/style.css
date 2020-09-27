@@ -21,7 +21,7 @@
   margin: 0;
   padding: 0;
   background-color: var(--light-gray);
-
+  height: 100%;
 }
 
 .page-body {
@@ -52,6 +52,10 @@
 }
 
 /* Шапка с навигацией */
+.main-header-nav{
+  display: grid;
+
+}
 .main-header-logo {
   align-items: center;
 }
@@ -164,6 +168,12 @@
   background-color: var(--basic-brown);
   color: var(--basic-white);
   align-self: center;
+}
+
+.hotel-search-form{
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
 }
 
 .search-button {

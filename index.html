@@ -12,7 +12,7 @@
 <body class="page-body">
 
   <header class="main-header">
-
+    
     <nav class="main-header-nav">
       <a class="main-header-logo">
         <img src="img/main-nav-logo.svg" width="138" height="70" alt="Логотип города Седона">
@@ -108,8 +108,18 @@
       </p>
       <div class="hotel-search">
         <button class="hotel-search form-opening-button" type="button">Поиск гостиницы в Седоне</button>
-        <!-- Форма поиска гостиницы -->
-        <button class="hotel-search search-button" type="submit">Найти</button>
+        <form class="hotel-search-form" action="" method="GET">
+          <label for="arrival-date">Дата заезда: </label>
+          <input class="hotel-search-arrival-date" type="date" name="arrival-date" id="arrival-date">
+          <label for="departure-date">Дата выезда: </label>
+          <input class="hotel-search-departure-date" type="date" name="departure-date" id="departure-date">
+          <label for="adults">Взрослые: </label>
+          <input class="hotel-search-adults" type="number" name="adults" id="adults" value="2">
+          <label for="children">Дети: </label>
+          <input class="hotel-search-children" type="number" name="children" id="children" value="0">
+          <button class="hotel-search search-button" type="submit">Найти</button>
+        </form>
+
       </div>
     </section>
 
