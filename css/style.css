@@ -300,9 +300,12 @@
 .hotels-filter-wrapper {
   background-color: var(--darker-gray);
   width: 100%;
-  height: auto;
+  height: 217px;
 }
-
+.hotels-filter-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
 .hotels-filter-list-heading {
   font-weight: bold;
   font-size: 16px;
@@ -359,6 +362,10 @@
 }
 
 /* Блок с результатами примененного фильтра */
+.result-sort-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
 .hotels-results-list-heading {
   font-size: 12px;
   line-height: 18px;
@@ -390,6 +397,9 @@
 .hotels-filter-result-list {
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+  grid-template-columns: 1fr;
 }
 
 .hotels-image-box {
