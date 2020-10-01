@@ -124,15 +124,16 @@
 
       <section class="hotel-search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
-        <div class="hotel-search-wrapper">
-          <p class="hotel-search-text">
-            <span class="hotel-search-text-interested">Заинтересовались?</span><br> Укажите предполагаемые даты
-            поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне
-          </p>
-          <button class="form-opening-button" type="button">Поиск гостиницы в Седоне</button>
-        </div>
-        <fieldset class="hotel-search-form-field">
+
+        <span class="hotel-search-text-interested">Заинтересовались?</span>
+        <p class="hotel-search-text">Укажите предполагаемые даты
+          поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+        <fieldset class="search-form-field">
+          <legend>
+            <button class="form-opening-button" type="button">Поиск гостиницы в Седоне</button>
+          </legend>
           <form class="hotel-search-form" action="" method="GET">
+            <!-- <div class="form-inputs-wrapper"> -->
             <div class="arrival-date-wrapper">
               <label for="arrival-date">Дата заезда: </label>
               <input class="hotel-search-arrival-date" type="date" name="arrival-date" id="arrival-date">
@@ -147,19 +148,20 @@
               <label for="children">Дети: </label>
               <input class="hotel-search-children" type="number" name="children" id="children" value="0">
             </div>
+            <!-- </div> -->
             <button class="search-button" type="submit">Найти</button>
           </form>
         </fieldset>
 
-    </div>
-    </section>
 
-    <section class="main-map">
-      <h2 class="visually-hidden">Карта</h2>
-      <iframe class="google-map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.13565774555!2d-111.8301578595786!3d34.854443815278216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1600009301704!5m2!1sru!2sru"
-        aria-hidden="true" tabindex="0" width="800" height="474"></iframe>
-    </section>
+      </section>
+
+      <section class="main-map">
+        <h2 class="visually-hidden">Карта</h2>
+        <iframe class="google-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.13565774555!2d-111.8301578595786!3d34.854443815278216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1600009301704!5m2!1sru!2sru"
+          aria-hidden="true" tabindex="0" width="800" height="474"></iframe>
+      </section>
     </div>
 
   </main>
@@ -187,7 +189,6 @@
             <a class="footer-youtube" href="blank"></a>
           </li>
         </ul>
-
       </section>
 
       <section class="footer-copyright">
@@ -200,7 +201,6 @@
               alt="Логотип HTML Academy">
           </a>
         </div>
-
       </section>
     </div>
 
