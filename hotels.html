@@ -16,22 +16,22 @@
       <a class="main-header-logo" href="index.html">
         <img src="img/main-nav-logo.svg" width="138" height="70" alt="Логотип города Седона">
       </a>
-      <div class="nav-menu-list-wrapper">
-        <ul class="nav-menu">
-          <li class="nav-menu-item">
-            <a class="nav-menu-item nav-info" href="">Информация</a>
-          </li>
-          <li class="nav-menu-item">
-            <a class="nav-menu-item nav-media" href="">Фото и видео</a>
-          </li>
-          <li class="nav-menu-item">
-            <a class="nav-menu-item nav-map" href="">Карта штата</a>
-          </li>
-          <li class="nav-menu-item">
-            <a class="nav-menu-item nav-hotels" href="">Гостиницы</a>
-          </li>
-        </ul>
-      </div>
+
+      <ul class="nav-menu">
+        <li class="nav-menu-item nav-info">
+          <a class="nav-menu-item-link nav-info-link" href="">Информация</a>
+        </li>
+        <li class="nav-menu-item nav-media">
+          <a class="nav-menu-item-link nav-media-link" href="">Фото и видео</a>
+        </li>
+        <li class="nav-menu-item nav-map">
+          <a class="nav-menu-item-link nav-map-link" href="">Карта штата</a>
+        </li>
+        <li class="nav-menu-item nav-hotels">
+          <a class="nav-menu-item-link nav-hotels-link" href="hotels.html">Гостиницы</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -39,61 +39,54 @@
       <h1 class="visually-hidden">Гостиницы</h1>
 
       <section class="hotels-filter">
-        <div class="hotels-filter-wrapper">
-          <img src="img/hotels-filter-background" alt="hotels-filter-background">
-          <h2 class="visually-hidden">Фильтр гостиниц</h2>
-          <form class="hotels-filter-box" action="https://echo.htmlacademy.ru/" method="GET">
-            <div class="infrastructure">
-              <p class="hotels-filter-list-heading">Инфраструктура:</p>
-              <ul class="hotels-filter-list">
-                <li class="hotels-filter-option">
-                  <input class="hotels-filter-option-checkbox" type="checkbox" name="swimming-pool" id="swimming-pool"
-                    checked>
-                  <label for="swimming-pool">Бассейн</label>
-                </li>
-                <li class="hotels-filter-option">
-                  <input class="hotels-filter-option-checkbox" type="checkbox" name="parking" id="parking">
-                  <label for="parking">Паркинг</label>
-                </li>
-                <li class="hotels-filter-option">
-                  <input class="hotels-filter-option-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
-                  <label for="wi-fi">WI-FI</label>
-                </li>
-              </ul>
-            </div>
+        <h2 class="visually-hidden">Фильтр гостиниц</h2>
+        <form class="filter-form" action="https://echo.htmlacademy.ru/" method="GET">
+          <ul class="filter-list">
+            <span class="filter-list-header">Инфраструктура:</span>
+            <li class="filter-item">
+              <input class="filter-checkbox" type="checkbox" name="swimming-pool" id="swimming-pool" checked>
+              <label class="checkbox-label" for="swimming-pool">Бассейн</label>
+            </li>
+            <li class="filter-item">
+              <input class="filter-checkbox" type="checkbox" name="parking" id="parking">
+              <label class="checkbox-label" for="parking">Паркинг</label>
+            </li>
+            <li class="filter-item">
+              <input class="filter-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+              <label class="checkbox-label" for="wi-fi">WI-FI</label>
+            </li>
+          </ul>
 
-            <div class="housing-type">
-              <p class="hotels-filter-list-heading">Тип жилья:</p>
-              <ul class="hotels-filter-list">
-                <li class="hotels-filter-option">
-                  <input class="hotels-filter-option-checkbox" type="checkbox" name="hotels" id="hotels" checked>
-                  <label for="hotels">Гостиница</label>
-                </li>
-                <li class="hotels-filter-option">
-                  <input class="hotels-filter-option-checkbox" type="checkbox" name="motel" id="motel" checked>
-                  <label for="motel">Мотель</label>
-                </li>
-                <li class="hotels-filter-option">
-                  <input class="hotels-filter-option-checkbox" type="checkbox" name="apartments" id="apartments"
-                    checked>
-                  <label for="apartments">Апартаменты</label>
-                </li>
-              </ul>
-            </div>
+          <ul class="filter-list">
+            <span class="filter-list-header">Тип жилья:</span>
+            <li class="filter-item">
+              <input class="filter-checkbox" type="checkbox" name="hotels" id="hotels" checked>
+              <label class="checkbox-label" for="hotels">Гостиница</label>
+            </li>
+            <li class="filter-item">
+              <input class="filter-checkbox" type="checkbox" name="motel" id="motel" checked>
+              <label class="checkbox-label" for="motel">Мотель</label>
+            </li>
+            <li class="filter-item">
+              <input class="filter-checkbox" type="checkbox" name="apartments" id="apartments" checked>
+              <label class="checkbox-label" for="apartments">Апартаменты</label>
+            </li>
+          </ul>
 
-            <div class="price-filter">
-              <label class="price-filter-range-label" for="price-range">Стоимость в сутки (р):</label>
-              <div class="output-area-min">
-                <output class="min-price-val"></output>
-              </div>
-              <div class="output-area-max">
-                <output class="max-price-val"></output>
-              </div>
-              <input class="price-filter-range" type="range" name="price-range" id="price-range" min="0" max="3500">
-              <button class="show-results-button" type="submit">Показать</button>
+          <fieldset class="filter-fieldset price-filter">
+            <legend class="filter-fieldset-header">Стоимость в сутки (р):</legend>
+            <label class="price-filter-range-label" for="price-range"></label>
+            <div class="output-area-min">
+              <output class="min-price-val"></output>
             </div>
-          </form>
-        </div>
+            <div class="output-area-max">
+              <output class="max-price-val"></output>
+            </div>
+            <input class="price-filter-range" type="range" name="price-range" id="price-range" min="0" max="3500">
+            <button class="show-results-button" type="submit">Показать</button>
+          </fieldset>
+
+        </form>
 
       </section>
 
