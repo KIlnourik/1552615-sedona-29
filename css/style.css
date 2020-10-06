@@ -16,6 +16,7 @@
   --darker-gray: #666666;
   --darkest-gray: #333333;
   --basic-black: #000000;
+  --sign-grey: #A9A9A9;
 }
 
 .page {
@@ -43,14 +44,14 @@
 
 /* Для невидимых элементов */
 .visually-hidden {
-  position: absolute !important;
+  position: absolute;
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
 }
 
@@ -160,8 +161,6 @@
 .text-intro {
   font-weight: bold;
   text-align: center;
-  /* outline: 5px solid rgba(255, 0, 255, 0.3);
-  outline-offset: -5px; */
 }
 
 /* Список причин посещения Седоны */
@@ -178,25 +177,29 @@
   align-self: center;
 }
 
-/* .reasons-item-header::after {
-  counter-increment: test;
-  content: "--№" counter() "--";
-} */
 .reasons-caption {
+  font-size: 14px;
   line-height: 26px;
-  /* outline: 5px solid rgba(255, 0, 255, 0.3);
-  outline-offset: -5px; */
 }
 
-.reasons-text {
+.reasons-text,
+.first-reasons-item-text {
   font-size: 14px;
   line-height: 21px;
   color: var(--darkest-gray);
 }
 
+/* .reasons-text::before {
+  counter-increment: list;
+  content: "— №" counter(list) "—";
+  position: absolute;
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  top: 50%;
+} */
+
 .first-reason-box,
 .second-reason-box {
-  background-color: var(--sky-blue);
   align-self: center;
   display: grid;
   grid-template-columns: min-content min-content;
@@ -204,10 +207,26 @@
 
 .first-reason-text-box,
 .second-reason-text-box {
-  width: 400px;
+  min-width: 400px;
+  background-color: var(--sky-blue);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
+}
+
+.first-reason-text::before {
+  content: "— №1 —";
+  position: absolute;
+  top: 50%;
+  left: 180px;
+}
+
+.second-reason-text::before {
+  content: "— №2 —";
+  position: absolute;
+  top: 50%;
+  left: 180px;
 }
 
 .first-reason-list {
@@ -224,7 +243,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .first-reason-item-image {
@@ -268,6 +286,7 @@
   background-color: var(--light-gray);
   display: flex;
   justify-content: space-between;
+  counter-reset: list 2;
 }
 
 .other-reasons-item {
@@ -275,21 +294,35 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
 }
 
 .other-reasons-text {
   padding: 0 60px;
 }
 
+.other-reasons-text::before {
+  counter-increment: list;
+  content: "— №" counter(list) "—";
+  position: absolute;
+  top: 50%;
+  left: 180px;
+}
+
 /* Блок с поиском гостиницы */
+.hotel-search {
+  position: relative;
+}
 .hotel-search-text {
   font-size: 14px;
   line-height: 24px;
   color: var(--basic-black);
   vertical-align: center;
+  margin-bottom: 51px;
 }
 
 .hotel-search-text-interested {
+  margin-top: 58px;
   font-weight: bold;
   font-size: 30px;
   color: var(--basic-black);
@@ -297,76 +330,122 @@
 
 .form-opening-button {
   margin: 0;
+  padding: 0; 
   width: 568px;
   height: 86px;
   font-weight: bold;
   text-transform: uppercase;
   background-color: var(--basic-brown);
   color: var(--basic-white);
+  border: none;
 }
 
-.search-form-field {
-  /* position: absolute; */
-  margin: 0 auto;
-  padding: 0;
-  width: 568px;
-  background-color: var(--basic-white);
-  border: 1px solid var(--basic-black);
-
+.form-wrapper {
+  padding: 55px;
 }
 
 .hotel-search-form {
   margin: 0 auto;
   width: 568px;
-  height: 395px;
   font-weight: bold;
+  padding: 0;
   font-size: 14px;
   line-height: 26px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  background-color: var(--basic-white);
+  border: none;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  position: absolute;
+  left: 316px;
 }
 
 .arrival-date-wrapper,
 .departure-date-wrapper,
 .adult-and-children-wrapper {
-  width: 458px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 29px;
 }
 
-.hotel-search-arrival-date,
-.hotel-search-departure-date {
-  width: 346px;
-  height: 38px;
+.arrival-date-wrapper {
+
 }
 
-.hotel-search-adults,
-.hotel-search-children {
+.arrival-date-output,
+.departure-date-output {
+  width: 336px;
+  padding: 10px;
+  background-color: var(--basic-gray);
+  font-weight: bold;
+  text-align: start;
+  position: relative;
+}
+
+.arrival-date-output::after,
+.departure-date-output::after {
+  content: " ";
+  position: absolute;
+  background-image: url(../img/calendar.svg);
+  width: 21px;
+  height: 23px;
+  right: 9px;
+}
+
+.output-label {
+  display: block;
+  padding: 10px 5px; 
+}
+
+.adults-output,
+.children-output {
   width: 114px;
-  height: 38px;
+  padding: 10px;
+  background-color: var(--basic-gray); 
+  position: relative;
+}
+
+.adults-output::before,
+.children-output::before {
+  content: " ";
+  width: 12px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  background-color: var(--sign-grey);
+}
+
+.adults-output::after,
+.children-output::after {
+  content: " ";
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: 18px;
+  right: 13px;
+  background-image: url(../img/Union.svg);
 }
 
 .search-button {
-  width: 458px;
-  height: 58px;
+  padding: 16px 182px;
   text-transform: uppercase;
   font-weight: bold;
   background-color: var(--sky-blue);
   color: var(--basic-white);
-
+  border: none;
 }
 
 /* Карта */
 .google-map {
-  padding: 0;
-  margin: 0;
+  background-image: url(../img/map.png);
   width: 100%;
+  border: none;
 }
 
 /* Подвал */
+/* .main-footer {
+  position: relative;
+} */
 .page-footer .container {
   vertical-align: center;
   background-color: var(--transparent-white);

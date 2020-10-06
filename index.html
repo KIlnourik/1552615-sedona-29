@@ -51,13 +51,14 @@
         <div class="intro-text-wrapper">
           <p class="text-intro">Седона - небольшой городок в Аризоне,<br>заслуживающий большего!</p>
           <h2 class="visually-hidden">Причины</h2>
-          <p class="reasons-text reasons-caption">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
+          <p class="reasons-caption">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
         </div>
 
         <div class="first-reason-box">
           <div class="first-reason-text-box">
             <h3 class="reasons-item-header white-header">Настоящий городок</h3>
-            <p class="reasons-text white-text">Седона - не аттракцион для туристов, там<br>течёт своя жизнь</p>
+            <p class="reasons-text first-reason-text white-text">Седона - не аттракцион для туристов, там<br>течёт своя
+              жизнь</p>
           </div>
           <div class="first-reason-img-field">
             <img class="first-reason-img" src="img/image_for_first_reason.jpg" width="800" height="256"
@@ -72,7 +73,7 @@
             </div>
             <div class="first-reason-item-text-content">
               <h4 class="reasons-item-header first-reason-item-header">Жилье</h4>
-              <p class="reasons-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              <p class="first-reasons-item-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </div>
           </li>
           <li class="first-reason-item">
@@ -81,7 +82,7 @@
             </div>
             <div class="first-reason-item-text-content">
               <h4 class="reasons-item-header">Еда</h4>
-              <p class="reasons-text">Всегда заказывайте фирменный бургер, вы&nbspне&nbspразочаруетесь</p>
+              <p class="first-reasons-item-text">Всегда заказывайте фирменный бургер, вы&nbspне&nbspразочаруетесь</p>
             </div>
           </li>
           <li class="first-reason-item">
@@ -91,7 +92,7 @@
             </div>
             <div class="first-reason-item-text-content">
               <h4 class="reasons-item-header">Сувениры</h4>
-              <p class="reasons-text">Не только китайского, но и местного производства!</p>
+              <p class="first-reasons-item-text">Не только китайского, но и местного производства!</p>
             </div>
           </li>
         </ul>
@@ -103,7 +104,8 @@
           </div>
           <div class="second-reason-text-box">
             <h3 class="reasons-item-header white-header">Там есть мост&nbspдьявола</h3>
-            <p class="reasons-text white-text">Да, по нему можно пройти! Если конечно<br>вы осмелитесь</p>
+            <p class="reasons-text second-reason-text white-text">Да, по нему можно пройти! Если конечно<br>вы
+              осмелитесь</p>
           </div>
         </div>
 
@@ -121,40 +123,36 @@
             <p class="reasons-text other-reasons-text">большинство едет в гранд каньон и&nbspтолпится там</p>
           </li>
         </ul>
-        </ul>
+
       </section>
 
       <section class="hotel-search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
 
-        <span class="hotel-search-text-interested">Заинтересовались?</span>
+        <p class="hotel-search-text-interested">Заинтересовались?</p>
         <p class="hotel-search-text">Укажите предполагаемые даты
           поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-        <fieldset class="search-form-field">
-          <legend>
-            <button class="form-opening-button" type="button">Поиск гостиницы в Седоне</button>
-          </legend>
-          <form class="hotel-search-form" action="" method="GET">
-            <!-- <div class="form-inputs-wrapper"> -->
+        <button class="form-opening-button" type="button">Поиск гостиницы в Седоне</button>
+        <form class="hotel-search-form" action="" method="GET">
+          <div class="form-wrapper">
             <div class="arrival-date-wrapper">
-              <label for="arrival-date">Дата заезда: </label>
-              <input class="hotel-search-arrival-date" type="date" name="arrival-date" id="arrival-date">
+              <label class="output-label" for="arrival-date">Дата заезда: </label>
+              <output class="arrival-date-output" id="arrival-date">24 апреля 2017</output>
             </div>
             <div class="departure-date-wrapper">
-              <label for="departure-date">Дата выезда: </label>
-              <input class="hotel-search-departure-date" type="date" name="departure-date" id="departure-date">
+              <label class="output-label" for="departure-date">Дата выезда: </label>
+              <output class="departure-date-output" type="date" name="departure-date" id="departure-date">4 июля
+                2017</output>
             </div>
             <div class="adult-and-children-wrapper">
-              <label for="adults">Взрослые: </label>
-              <input class="hotel-search-adults" type="number" name="adults" id="adults" value="2">
-              <label for="children">Дети: </label>
-              <input class="hotel-search-children" type="number" name="children" id="children" value="0">
+              <label class="output-label" for="adults">Взрослые: </label>
+              <output class="adults-output" name="adults" id="adults">2</output>
+              <label class="output-label" for="children">Дети: </label>
+              <output class="children-output" name="children" id="children">0</output>
             </div>
-            <!-- </div> -->
             <button class="search-button" type="submit">Найти</button>
-          </form>
-        </fieldset>
-
+          </div>
+        </form>
 
       </section>
 
