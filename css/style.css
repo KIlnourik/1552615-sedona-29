@@ -183,20 +183,12 @@
 }
 
 .reasons-text,
-.first-reasons-item-text {
+.first-reasons-item-text,
+.reasons-numbering {
   font-size: 14px;
   line-height: 21px;
   color: var(--darkest-gray);
 }
-
-/* .reasons-text::before {
-  counter-increment: list;
-  content: "— №" counter(list) "—";
-  position: absolute;
-  outline-offset: -5px;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  top: 50%;
-} */
 
 .first-reason-box,
 .second-reason-box {
@@ -215,18 +207,9 @@
   position: relative;
 }
 
-.first-reason-text::before {
-  content: "— №1 —";
-  position: absolute;
-  top: 50%;
-  left: 180px;
-}
-
-.second-reason-text::before {
-  content: "— №2 —";
-  position: absolute;
-  top: 50%;
-  left: 180px;
+.reasons-numbering::after,
+.reasons-numbering::before {
+  content: " — ";
 }
 
 .first-reason-list {
@@ -301,18 +284,12 @@
   padding: 0 60px;
 }
 
-.other-reasons-text::before {
-  counter-increment: list;
-  content: "— №" counter(list) "—";
-  position: absolute;
-  top: 50%;
-  left: 180px;
-}
-
 /* Блок с поиском гостиницы */
+
 .hotel-search {
   position: relative;
 }
+
 .hotel-search-text {
   font-size: 14px;
   line-height: 24px;
@@ -367,8 +344,8 @@
   margin-bottom: 29px;
 }
 
-.arrival-date-wrapper {
-
+.adult-and-children-wrapper {
+  margin: 0;
 }
 
 .arrival-date-output,
@@ -427,7 +404,10 @@
 }
 
 .search-button {
-  padding: 16px 182px;
+  /* padding: 16px 182px; */
+  width: 458px;
+  height: 58px;
+  margin-top: 55px;
   text-transform: uppercase;
   font-weight: bold;
   background-color: var(--sky-blue);
@@ -563,11 +543,36 @@
 .checkbox-label {
   font-size: 14px;
   font-weight: normal;
+  margin-left: 39px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-checkbox + .checkbox-label::before {
+  content: " ";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: -39px;
+  background-image: url(../img/checkbox-off.png);
+}
+
+.filter-checkbox:checked + .checkbox-label::before {
+  content: " ";
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  left: -39px;
+  background-image: url(../img/checkbox-on.png);
 }
 
 .price-filter {
   color: var(--basic-white);
   border: none;
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 255, 0.3);
 }
 
 .price-filter-range-label {
