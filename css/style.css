@@ -698,6 +698,7 @@
   min-height: 86px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .result-amount {
@@ -717,6 +718,24 @@
   padding: 0;
   display: flex;
   justify-content: space-between;
+}
+
+.result-sort-box::after {
+  position: absolute;
+  content: " ";
+  width: 11px;
+  height: 10px;
+  right: 73px;
+  background-image: url(../img/icon-down-dir.svg);
+}
+
+.result-sort-box::before {
+  position: absolute;
+  content: " ";
+  width: 11px;
+  height: 10px;
+  right: 96px;
+  background-image: url(../img/icon-up-dir.svg);
 }
 
 .result-sort-item {
@@ -750,20 +769,23 @@
 }
 
 .hotels-list-item {
+  padding: 0;
   border: 1px solid var(--border-grey);
-  height: 150px;
-  padding: 0 73px;
+  padding: 30px 73px;
   display: flex;
-  align-items: center;
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
 }
 
 .hotels-item-box {
-  padding: 0 30px;
+  margin-left: 30px;
   flex-grow: 1;
+  height: 91px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
   align-items: flex-start;
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
 }
 
 .hotels-image-box {
@@ -773,28 +795,54 @@
 }
 
 .hotels-rating-box {
+  align-self: flex-end;
   width: 110px;
   height: 27px;
   background-color: var(--basic-gray);
 }
 
+.hotels-rating-box::before {
+  content: " ";
+
+}
+
 .hotels-name-heading {
   padding: 0;
   margin: 0;
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
 }
 
 .hotels-name-link {
+  margin: 0;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   text-decoration: none;
   color: var(--basic-black);
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 255, 0.3);
 }
 
 .hotels-filter-result-text {
   font-size: 14px;
+  margin-top: 7px;
+  padding: 0;
   line-height: 21px;
   color: var(--darkest-gray);
+  display: flex;
+  min-width: 258px;
+  position: relative;
+}
+
+.type,
+.start-price {
+  margin: 0;
+}
+
+.start-price {
+  position: absolute;
+  right: 80px;
 }
 
 .hotels-rating {
@@ -805,7 +853,12 @@
   padding: 3px 12px 3px 15px;
 }
 
+.buttons {
+  margin-top: 8px;
+}
+
 .more-details {
+  margin: 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
