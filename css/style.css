@@ -580,7 +580,6 @@
 }
 
 .price-filter-header {
-  /* display: block; */
   margin-top: 15px;
   padding-left: 140px;
   text-align: start;
@@ -770,11 +769,10 @@
 
 .hotels-list-item {
   padding: 0;
+  position: relative;
   border: 1px solid var(--border-grey);
   padding: 30px 73px;
   display: flex;
-  outline-offset: -5px;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
 }
 
 .hotels-item-box {
@@ -784,8 +782,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  outline-offset: -5px;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
 }
 
 .hotels-image-box {
@@ -801,16 +797,39 @@
   background-color: var(--basic-gray);
 }
 
-.hotels-rating-box::before {
-  content: " ";
+.rating-block {
+  /* position: relative; */
+  position: absolute;
+  right: 30px;
+  width: 100px;
+  height: 17px;
+  display: flex;
+}
 
+.rating-star {
+  margin: 0;
+  /* position: absolute; */
+  content: " ";
+  width: 18px;
+  height: 17px;
+  background-image: url(../img/star.svg);
+}
+
+.four-stars {
+  right: 47px;
+}
+
+.three-stars {
+  right: 30px;
+}
+
+.two-stars {
+  right: 13px;
 }
 
 .hotels-name-heading {
   padding: 0;
   margin: 0;
-  outline-offset: -5px;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
 }
 
 .hotels-name-link {
@@ -820,8 +839,6 @@
   line-height: 26px;
   text-decoration: none;
   color: var(--basic-black);
-  outline-offset: -5px;
-  outline: 5px solid rgba(255, 255, 0.3);
 }
 
 .hotels-filter-result-text {
