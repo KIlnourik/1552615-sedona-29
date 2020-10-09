@@ -553,6 +553,10 @@
   user-select: none;
 }
 
+.filter-checkbox {
+  display: none;
+}
+
 .filter-checkbox+.checkbox-label::before {
   content: " ";
   position: absolute;
