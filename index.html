@@ -20,13 +20,13 @@
 
       <ul class="nav-menu">
         <li class="nav-menu-item nav-info">
-          <a class="nav-menu-item-link nav-info-link" href="">Информация</a>
+          <a class="nav-menu-item-link nav-info-link" href="#">Информация</a>
         </li>
         <li class="nav-menu-item nav-media">
-          <a class="nav-menu-item-link nav-media-link" href="">Фото и видео</a>
+          <a class="nav-menu-item-link nav-media-link" href="#">Фото и видео</a>
         </li>
         <li class="nav-menu-item nav-map">
-          <a class="nav-menu-item-link nav-map-link" href="">Карта штата</a>
+          <a class="nav-menu-item-link nav-map-link" href="#">Карта штата</a>
         </li>
         <li class="nav-menu-item nav-hotels">
           <a class="nav-menu-item-link nav-hotels-link" href="hotels.html">Гостиницы</a>
@@ -133,30 +133,37 @@
 
       <section class="hotel-search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
-
         <p class="hotel-search-text-interested">Заинтересовались?</p>
         <p class="hotel-search-text">Укажите предполагаемые даты
-          поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+          поездки,</p>
+        <p class="hotel-search-text second-line">и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
         <button class="form-opening-button" type="button">Поиск гостиницы в Седоне</button>
         <form class="hotel-search-form" method="GET">
-          <div class="form-wrapper">
-            <div class="arrival-date-wrapper">
-              <label class="output-label" for="arrival-date">Дата заезда: </label>
-              <output class="arrival-date-output" id="arrival-date">24 апреля 2017</output>
-            </div>
-            <div class="departure-date-wrapper">
-              <label class="output-label" for="departure-date">Дата выезда: </label>
-              <output class="departure-date-output" name="departure-date" id="departure-date">4 июля
-                2017</output>
-            </div>
-            <div class="adult-and-children-wrapper">
-              <label class="output-label" for="adults">Взрослые: </label>
-              <output class="adults-output" name="adults" id="adults">2</output>
-              <label class="output-label" for="children">Дети: </label>
-              <output class="children-output" name="children" id="children">0</output>
-            </div>
-            <button class="search-button" type="submit">Найти</button>
+          <div class="arrival-date-wrapper">
+            <label class="input-label" for="arrival-date">Дата заезда: </label>
+            <input class="arrival-date-input" type="text" id="arrival-date" value="24 апреля 2017">
+            <button class="calendar" type="button"></button>
           </div>
+          <div class="departure-date-wrapper">
+            <label class="input-label" for="departure-date">Дата выезда: </label>
+            <input class="departure-date-input" type="text" name="departure-date" id="departure-date"
+              value="4 июля 2017">
+            <button class="calendar" type="button"></button>
+          </div>
+          <div class="adult-wrapper">
+            <label class="input-label adult-input-label" for="adults">Взрослые: </label>
+            <button class="input-minus" type="button"></button>
+            <input class="adults-input" type="text" name="adults" id="adults" value="2">
+            <button class="input-plus" type="button"></button>
+          </div>
+          <div class="children-wrapper">
+            <label class="input-label children-input-label" for="children">Дети: </label>
+            <button class="input-minus" type="button"></button>
+            <input class="children-input" type="text" name="children" id="children" value="0">
+            <button class="input-plus" type="button"></button>
+          </div>
+          <button class="search-button" type="submit">Найти</button>
+
         </form>
 
       </section>

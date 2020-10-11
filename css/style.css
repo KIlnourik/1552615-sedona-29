@@ -316,10 +316,14 @@
 }
 
 .hotel-search-text {
+  width: 435px;
+  margin: 0 auto;
   font-size: 14px;
   line-height: 24px;
   color: var(--basic-black);
-  vertical-align: center;
+}
+
+.second-line {
   margin-bottom: 45px;
 }
 
@@ -332,7 +336,6 @@
 
 .form-opening-button {
   margin: 0;
-
   padding: 0;
   width: 568px;
   height: 86px;
@@ -343,17 +346,14 @@
   border: none;
 }
 
-.form-wrapper {
-  padding: 50px;
-}
-
 .hotel-search-form {
   margin: 0 auto;
-  padding: 0;
-  width: 568px;
+  padding: 50px 40px;
+  width: 488px;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
+  color: var(--basic-black);
   background-color: var(--basic-white);
   border: none;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
@@ -366,77 +366,103 @@
 }
 
 .arrival-date-wrapper,
-.departure-date-wrapper,
-.adult-and-children-wrapper {
+.departure-date-wrapper {
+  /* .adult-wrapper,
+.children-wrapper { */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 27px;
 }
 
-.adult-and-children-wrapper {
-  margin: 0;
-
-}
-
-.arrival-date-output,
-.departure-date-output {
+.arrival-date-input,
+.departure-date-input {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-black);
   width: 330px;
   margin-right: 5px;
   padding: 7px;
   background-color: var(--basic-gray);
   font-weight: bold;
   text-align: start;
+  border: none;
   position: relative;
 }
 
-.arrival-date-output::after,
-.departure-date-output::after {
+.calendar {
   content: " ";
   position: absolute;
   background-image: url(../img/calendar.svg);
   width: 21px;
   height: 23px;
-  right: 9px;
+  right: 65px;
+  border: none;
 }
 
-.output-label {
-  display: block;
+.input-label {
+  display: inline-block;
   padding: 5px 5px;
 }
 
-.adults-output,
-.children-output {
-  width: 100px;
-  padding: 5px;
-  background-color: var(--basic-gray);
+.adult-wrapper,
+.children-wrapper {
+  display: inline-block;
   position: relative;
 }
 
-.adults-output::before,
-.children-output::before {
-  content: " ";
-  width: 12px;
-  height: 3px;
-  position: absolute;
-  top: 50%;
-  left: 13px;
-  background-color: var(--sign-grey);
+.children-wrapper {
+  display: inline-block;
+  margin-left: 40px;
 }
 
-.adults-output::after,
-.children-output::after {
+.adults-input,
+.children-input {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  width: 114px;
+  height: 38px;
+  background-color: var(--basic-gray);
+  border: none;
+  text-align: center;
+}
+
+.input-plus {
   content: " ";
   width: 11px;
   height: 11px;
   position: absolute;
-  top: 14px;
-  right: 13px;
   background-image: url(../img/Union.svg);
+  border: none;
+  top: 15px;
+  right: 15px;
+}
+
+.input-minus {
+  content: " ";
+  width: 12px;
+  height: 3px;
+  position: absolute;
+  background-color: var(--sign-grey);
+  border: none;
+  top: 19px;
+  right: 90px;
+}
+
+.adult-input-label {
+  margin-right: 30px;
+}
+
+.children-input-label {
+  margin-right: 20px;
 }
 
 .search-button {
-  /* padding: 16px 182px; */
   width: 458px;
   height: 58px;
   margin-top: 55px;
@@ -470,16 +496,12 @@
   justify-content: space-around;
   align-items: center;
   padding: 0 40px;
-  outline-offset: -2px;
-  outline: 2px solid rgba(255, 0, 255, 0.3);
 }
 
 /* Телефон и хэштег */
 .footer-contact {
   font-weight: bold;
   color: var(--basic-black);
-  outline-offset: -2px;
-  outline: 2px solid rgba(255, 0, 255, 0.3);
 }
 
 .footer-text {
@@ -541,8 +563,6 @@
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  outline-offset: -2px;
-  outline: 2px solid rgba(255, 0, 255, 0.3);
 }
 
 .footer-copyright-text {
@@ -589,6 +609,7 @@
 
 .filter-list-header,
 .price-filter-header {
+  display: inline-block;
   font-weight: bold;
   font-size: 16px;
   margin-bottom: 15px;
