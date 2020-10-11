@@ -92,7 +92,7 @@
 }
 
 .nav-menu-item-link {
-  padding: 15px 0;
+  padding: 14px 0px;
   color: var(--basic-black);
   font-weight: bold;
   font-size: 14px;
@@ -152,16 +152,24 @@
 
 .intro-text-wrapper {
   margin: 0;
-  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 216px;
+  justify-content: space-around;
 }
 
 .text-intro {
   font-weight: bold;
   text-align: center;
+  display: block;
+}
+
+.reasons-caption {
+  margin-top: 22px;
+  font-size: 14px;
+  line-height: 26px;
+  display: block;
 }
 
 /* Список причин посещения Седоны */
@@ -172,20 +180,20 @@
 
 .reasons-item-header {
   font-weight: bold;
+  font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
   width: 180px;
   align-self: center;
+  margin-top: 10px;
 }
 
-.reasons-caption {
-  font-size: 14px;
-  line-height: 26px;
-}
 
 .reasons-text,
 .first-reasons-item-text,
 .reasons-numbering {
+  margin-top: 8px;
+  margin-bottom: 18px;
   font-size: 14px;
   line-height: 21px;
   color: var(--darkest-gray);
@@ -204,9 +212,13 @@
   background-color: var(--sky-blue);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   position: relative;
 }
+
+/* .reasons-numbering {
+  display: block;
+} */
 
 .reasons-numbering::after,
 .reasons-numbering::before {
@@ -214,15 +226,16 @@
 }
 
 .first-reason-list {
-  height: 330px;
   display: flex;
   justify-content: space-around;
   padding: 0;
-  margin: 0;
+  margin-top: 55px;
+  margin-bottom: 60px;
   background-color: var(--basic-white);
 }
 
 .first-reason-item {
+  padding-left: 0;
   background-color: var(--basic-white);
   display: flex;
   flex-direction: column;
@@ -230,22 +243,34 @@
 }
 
 .first-reason-item-image {
-  flex-basis: 80px;
-  width: 80px;
+  margin-top: 0;
+  margin-bottom: 8px;
   align-self: center;
+}
+
+.about-souvenirs {
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .first-reason-item-header {
   align-self: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.first-reason-item-text-content {
-  margin: 0 50px;
+.first-reason-item-content {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 
+.first-reasons-item-text {
+  width: 300px;
+  display: block;
+}
+
+.first-reason-item-text,
 .second-reason-box {
   background-color: var(--sky-blue);
   align-self: center;
@@ -269,7 +294,7 @@
   height: 256px;
   background-color: var(--light-gray);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   counter-reset: list 2;
 }
 
@@ -277,8 +302,7 @@
   flex-basis: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  position: relative;
+  justify-content: center;
 }
 
 .other-reasons-text {
@@ -296,11 +320,11 @@
   line-height: 24px;
   color: var(--basic-black);
   vertical-align: center;
-  margin-bottom: 51px;
+  margin-bottom: 45px;
 }
 
 .hotel-search-text-interested {
-  margin-top: 58px;
+  margin-top: 55px;
   font-weight: bold;
   font-size: 30px;
   color: var(--basic-black);
@@ -308,6 +332,7 @@
 
 .form-opening-button {
   margin: 0;
+
   padding: 0;
   width: 568px;
   height: 86px;
@@ -319,7 +344,7 @@
 }
 
 .form-wrapper {
-  padding: 55px;
+  padding: 50px;
 }
 
 .hotel-search-form {
@@ -336,23 +361,29 @@
   left: 316px;
 }
 
+.arrival-date-wrapper {
+  margin-top: 5px;
+}
+
 .arrival-date-wrapper,
 .departure-date-wrapper,
 .adult-and-children-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
 }
 
 .adult-and-children-wrapper {
   margin: 0;
+
 }
 
 .arrival-date-output,
 .departure-date-output {
-  width: 336px;
-  padding: 10px;
+  width: 330px;
+  margin-right: 5px;
+  padding: 7px;
   background-color: var(--basic-gray);
   font-weight: bold;
   text-align: start;
@@ -371,13 +402,13 @@
 
 .output-label {
   display: block;
-  padding: 10px 5px;
+  padding: 5px 5px;
 }
 
 .adults-output,
 .children-output {
-  width: 114px;
-  padding: 10px;
+  width: 100px;
+  padding: 5px;
   background-color: var(--basic-gray);
   position: relative;
 }
@@ -399,7 +430,7 @@
   width: 11px;
   height: 11px;
   position: absolute;
-  top: 18px;
+  top: 14px;
   right: 13px;
   background-image: url(../img/Union.svg);
 }
@@ -409,6 +440,7 @@
   width: 458px;
   height: 58px;
   margin-top: 55px;
+  margin-bottom: 5px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 21px;
@@ -420,9 +452,11 @@
 
 /* Карта */
 .google-map {
+  margin: 0;
   background-image: url(../img/map.png);
   width: 100%;
   border: none;
+
 }
 
 /* Подвал */
@@ -430,25 +464,37 @@
   position: relative;
 } */
 .page-footer .container {
-  vertical-align: center;
+  margin: 0;
   background-color: var(--transparent-white);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 0 40px;
+  outline-offset: -2px;
+  outline: 2px solid rgba(255, 0, 255, 0.3);
 }
 
 /* Телефон и хэштег */
 .footer-contact {
   font-weight: bold;
   color: var(--basic-black);
+  outline-offset: -2px;
+  outline: 2px solid rgba(255, 0, 255, 0.3);
 }
 
 .footer-text {
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
 
+.footer-hashtag {
+  margin-bottom: 10px;
+}
+
 .footer-phone {
+  margin-top: 0;
+  margin-bottom: 20px;
   text-decoration: none;
   color: var(--basic-black);
 }
@@ -456,7 +502,8 @@
 /* Социальные сети */
 .footer-socials-list {
   list-style: none;
-  padding: 0;
+  padding: 7px;
+  margin-right: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -488,10 +535,14 @@
 
 /* Копирайт */
 .footer-copyright-wrapper {
+  margin-right: 10px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
+  outline-offset: -2px;
+  outline: 2px solid rgba(255, 0, 255, 0.3);
 }
 
 .footer-copyright-text {
