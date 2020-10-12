@@ -565,6 +565,13 @@
   align-items: center;
 }
 
+.filter-list-header {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+
 .footer-copyright-text {
   font-size: 14px;
   margin-right: 10px;
@@ -584,10 +591,13 @@
 }
 
 .filter-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-row: 1fr;
-  padding: 15px 0;
+  padding: 20px 72px;
+  /* height: 187px; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
 }
 
 .filter-list {
@@ -595,24 +605,48 @@
   font-size: 16px;
   line-height: 21px;
   list-style: none;
-  margin-left: 72px;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 0, 255, 0.3);
+}
+
+.filter-list-wrapper {
+  display: inline-block;
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+}
+
+
+
+.house-type-wrapper{
+  margin-left: 0;
+  margin-right: 225px;
 }
 
 .filter-item {
-  padding: 10px 0;
+  padding-top: 25px;
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
 }
 
 .filter-list-header,
 .price-filter-header {
-  display: inline-block;
+  width: 100%;
+  text-align: start;
   font-weight: bold;
   font-size: 16px;
-  margin-bottom: 15px;
+  display: inline-block;
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+}
+
+.filter-list-header {
+  margin: 0;
 }
 
 .checkbox-label {
@@ -650,15 +684,15 @@
 .price-filter-wrapper {
   padding: 0;
   margin: 0;
-  height: 100%;
   color: var(--basic-white);
   border: none;
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 0, 255, 0.3);
 }
 
 .price-filter-header {
-  margin-top: 15px;
-  padding-left: 140px;
-  text-align: start;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .range-price-filter {
@@ -678,7 +712,7 @@
   display: flex;
   justify-content: center;
   margin-top: 0;
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 }
 
 .min-price-val,
@@ -687,7 +721,7 @@
   line-height: 21px;
   display: block;
   width: 159px;
-  padding: 10px 0;
+  padding: 6px 0;
   /* height: 36px; */
 }
 
@@ -749,12 +783,13 @@
 }
 
 .toggle-max {
-  left: 248px;
+  left: 255px;
 }
 
 .show-results-button {
-  padding: 7px 35px 8px 36px;
-  margin-top: 13px;
+  padding: 7px 30px 7px 38px;
+  margin: 0;
+  margin-top: 25px;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
