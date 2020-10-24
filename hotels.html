@@ -11,23 +11,23 @@
 <body class="page-body inner-page">
 
   <header class="main-header inner-page-header">
-    <nav class="main-header-nav">
+    <nav class="main-header-nav inner-page-nav">
       <a class="main-header-logo" href="index.html">
         <img src="img/main-nav-logo.svg" width="138" height="70" alt="Логотип города Седона">
       </a>
 
-      <ul class="nav-menu">
-        <li class="nav-menu-item nav-info">
-          <a class="nav-menu-item-link nav-info-link" href="">Информация</a>
+      <ul class="nav-menu inner-page-menu">
+        <li class="nav-menu-item inner-page-menu-item">
+          <a class="nav-menu-item-link nav-info-link selected-menu-item" href="#">Информация</a>
         </li>
-        <li class="nav-menu-item nav-media">
-          <a class="nav-menu-item-link nav-media-link" href="">Фото и видео</a>
+        <li class="nav-menu-item inner-page-menu-item">
+          <a class="nav-menu-item-link nav-media-link selected-menu-item" href="#">Фото и видео</a>
         </li>
-        <li class="nav-menu-item nav-map">
-          <a class="nav-menu-item-link nav-map-link" href="">Карта штата</a>
+        <li class="nav-menu-item inner-page-menu-item">
+          <a class="nav-menu-item-link nav-map-link selected-menu-item" href="#">Карта штата</a>
         </li>
-        <li class="nav-menu-item nav-hotels">
-          <a class="nav-menu-item-link nav-hotels-link" href="hotels.html">Гостиницы</a>
+        <li class="nav-menu-item inner-page-menu-item">
+          <a class="nav-menu-item-link nav-hotels-link selected-menu-item" href="hotels.html">Гостиницы</a>
         </li>
       </ul>
     </nav>
@@ -41,7 +41,6 @@
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru/">
           <div class="filter-list-wrapper infrastructure-wrapper">
-
             <h3 class="filter-list-header">Инфраструктура:</h3>
             <ul class="filter-list">
               <li class="filter-item">
@@ -60,19 +59,19 @@
           </div>
 
           <div class="filter-list-wrapper house-type-wrapper">
-            <h3 class="filter-list-header">Тип жилья:</h3>
-            <ul class="filter-list">
+            <h3 class="filter-list-header house-type-header">Тип жилья:</h3>
+            <ul class="filter-list house-type-list">
               <li class="filter-item">
-                <input class="filter-checkbox" type="checkbox" name="hotels" id="hotels" checked>
-                <label class="checkbox-label" for="hotels">Гостиница</label>
+                <input class="filter-checkbox house-type-checkbox" type="checkbox" name="hotels" id="hotels" checked>
+                <label class="checkbox-label house-type-label" for="hotels">Гостиница</label>
               </li>
               <li class="filter-item">
-                <input class="filter-checkbox" type="checkbox" name="motel" id="motel" checked>
-                <label class="checkbox-label" for="motel">Мотель</label>
+                <input class="filter-checkbox house-type-checkbox" type="checkbox" name="motel" id="motel" checked>
+                <label class="checkbox-label house-type-label" for="motel">Мотель</label>
               </li>
               <li class="filter-item">
-                <input class="filter-checkbox" type="checkbox" name="apartments" id="apartments" checked>
-                <label class="checkbox-label" for="apartments">Апартаменты</label>
+                <input class="filter-checkbox house-type-checkbox" type="checkbox" name="apartments" id="apartments" checked>
+                <label class="checkbox-label house-type-label" for="apartments">Апартаменты</label>
               </li>
             </ul>
           </div>
@@ -91,7 +90,7 @@
                 <div class="toggle toggle-min"></div>
                 <div class="toggle toggle-max"></div>
               </div>
-              <button class="show-results-button" type="submit">Показать</button>
+              <button class="show-results-button" type="submit" area-label="показать результаты поиска по заданным пунктам фильтра">Показать</button>
             </div>
           </div>
 
@@ -105,20 +104,19 @@
           <p class="result-amount">Найдено: 3</p>
           <p class="sort-list-heading">Сортировка:</p>
           <ul class="result-sort-list">
-            <li class="result-sort-item price-sort">по цене</li>
-            <li class="result-sort-item type-sort">по типу</li>
-            <li class="result-sort-item rating-sort">по рейтингу</li>
+            <li class="result-sort-item price-sort selected-sorting">по цене</li>
+            <li class="result-sort-item type-sort selected-sorting">по типу</li>
+            <li class="result-sort-item rating-sort selected-sorting">по рейтингу</li>
           </ul>
-          <button class="up-arrow" type="button"></button>
-          <button class="down-arrow" type="button"></button>
+          <button class="up-arrow selected-up-arrow" type="button"></button>
+          <button class="down-arrow selected-down-arrow" type="button"></button>
         </div>
 
         <ul class="hotels-list">
+
           <li class="hotels-list-item">
-            <div class="hotels-image-box">
               <img class="hotels-image" src="img/amamra-resort-spa-image.jpg" width="135" height="90"
                 alt="Фото гостницы Amara Resort & Spa">
-            </div>
             <div class="hotels-item-box">
               <h3 class="hotels-name-heading">
                 <a class="hotels-name-link" href="#">Amara resort & spa</a>
@@ -142,11 +140,10 @@
               <p class="hotels-rating">Рейтинг: 8,5</p>
             </div>
           </li>
+
           <li class="hotels-list-item">
-            <div class="hotels-image-box">
               <img class="hotels-image" src="img/desert-quail-inn-image.jpg" width="135" height="90"
                 alt="Фото мотеля Desert Quall Inn">
-            </div>
             <div class="hotels-item-box">
               <h3 class="hotels-name-heading">
                 <a class="hotels-name-link" href="#">Desert Quail Inn</a>
@@ -160,7 +157,6 @@
                 <a class="to-book-hotels" href="#">Забронировать</a>
               </div>
             </div>
-
             <div class="hotels-rating-box">
               <div class="rating-block three-stars">
                 <p class="rating-star"> </p>
@@ -170,11 +166,10 @@
               <p class="hotels-rating">Рейтинг: 8,9</p>
             </div>
           </li>
+
           <li class="hotels-list-item">
-            <div class="hotels-image-box">
               <img class="hotels-image" src="img/villas-at-poco-diablo.jpg" width="135" height="90"
                 alt="Фото аппартаментов Villas at Poco Diablo">
-            </div>
             <div class="hotels-item-box">
               <h3 class="hotels-name-heading">
                 <a class="hotels-name-link" href="#">Villas at Poco Diablo</a>
@@ -197,6 +192,7 @@
               <p class="hotels-rating">Рейтинг: 9,2</p>
             </div>
           </li>
+
         </ul>
       </section>
     </div>
