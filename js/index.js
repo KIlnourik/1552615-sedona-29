@@ -11,11 +11,11 @@ let storage = "";
 try {
     storage = localStorage.getItem("adults");
     storage = localStorage.getItem("chidren");
-  } catch (err) {
+} catch (err) {
     isStorageSupport = false;
-  }
+}
 
-formButton.addEventListener('click', function () {
+formButton.addEventListener("click", function () {
     searchForm.classList.toggle("search-form-hide");
     searchForm.classList.toggle("search-form-open");
 });
@@ -29,7 +29,7 @@ searchForm.addEventListener("submit", function (evt) {
             localStorage.setItem("adults", adultInput.value);
             localStorage.setItem("chidren", childrenInput.value);
         }
-        
+
     }
 })
 

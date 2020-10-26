@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Седона. Гостиницы</title>
-  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/normalize-mini.css" rel="stylesheet">
   <link href="css/style-mini.css" rel="stylesheet">
 </head>
 
@@ -44,15 +44,16 @@
             <h3 class="filter-list-header">Инфраструктура:</h3>
             <ul class="filter-list">
               <li class="filter-item">
-                <input class="filter-checkbox" type="checkbox" name="swimming-pool" id="swimming-pool" checked>
+                <input class="filter-checkbox visually-hidden" type="checkbox" name="swimming-pool" id="swimming-pool"
+                  checked>
                 <label class="checkbox-label" for="swimming-pool">Бассейн</label>
               </li>
               <li class="filter-item">
-                <input class="filter-checkbox" type="checkbox" name="parking" id="parking">
+                <input class="filter-checkbox visually-hidden" type="checkbox" name="parking" id="parking">
                 <label class="checkbox-label" for="parking">Парковка</label>
               </li>
               <li class="filter-item">
-                <input class="filter-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+                <input class="filter-checkbox visually-hidden" type="checkbox" name="wi-fi" id="wi-fi">
                 <label class="checkbox-label" for="wi-fi">WI-FI</label>
               </li>
             </ul>
@@ -62,16 +63,18 @@
             <h3 class="filter-list-header house-type-header">Тип жилья:</h3>
             <ul class="filter-list house-type-list">
               <li class="filter-item">
-                <input class="filter-checkbox house-type-checkbox" type="checkbox" name="hotels" id="hotels" checked>
+                <input class="filter-checkbox house-type-checkbox visually-hidden" type="checkbox" name="hotels"
+                  id="hotels" checked>
                 <label class="checkbox-label house-type-label" for="hotels">Гостиница</label>
               </li>
               <li class="filter-item">
-                <input class="filter-checkbox house-type-checkbox" type="checkbox" name="motel" id="motel" checked>
+                <input class="filter-checkbox house-type-checkbox visually-hidden" type="checkbox" name="motel"
+                  id="motel" checked>
                 <label class="checkbox-label house-type-label" for="motel">Мотель</label>
               </li>
               <li class="filter-item">
-                <input class="filter-checkbox house-type-checkbox" type="checkbox" name="apartments" id="apartments"
-                  checked>
+                <input class="filter-checkbox house-type-checkbox visually-hidden" type="checkbox" name="apartments"
+                  id="apartments" checked>
                 <label class="checkbox-label house-type-label" for="apartments">Апартаменты</label>
               </li>
             </ul>
@@ -88,8 +91,13 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
+                <div class="toggle toggle-min" tabindex="0">
+                  <span class="visually-hidden toggle-min-description">Маркер понижения стоимости в
+                    сутки</span>
+                </div>
+                <div class="toggle toggle-max" tabindex="0">
+                  <span class="visually-hidden toggle-max-description">Маркер понижения стоимости в сутки</span>
+                </div>
               </div>
               <button class="show-results-button" type="submit">Показать</button>
             </div>
@@ -105,9 +113,16 @@
           <p class="result-amount">Найдено: 3</p>
           <p class="sort-list-heading">Сортировка:</p>
           <ul class="result-sort-list">
-            <li class="result-sort-item price-sort selected-sorting">по цене</li>
-            <li class="result-sort-item type-sort">по типу</li>
-            <li class="result-sort-item rating-sort">по рейтингу</li>
+            <li class="result-sort-item price-sort">
+              <a href="#" class="result-sort-item-link selected-sorting">по
+                цене</a>
+            </li>
+            <li class="result-sort-item type-sort">
+              <a href="#" class="result-sort-item-link">по типу</a>
+            </li>
+            <li class="result-sort-item rating-sort">
+              <a href="#" class="result-sort-item-link">по рейтингу</a>
+            </li>
           </ul>
           <button class="up-arrow" type="button"></button>
           <button class="down-arrow selected-down-arrow" type="button"></button>
@@ -231,7 +246,7 @@
         </ul>
       </section>
 
-      <section class="footer-copyright">
+      <section class="footer-copyright inner-footer-copyright">
         <div class="footer-copyright-wrapper">
           <h2 class="visually-hidden">Copyright</h2>
           <p class="footer-copyright-text ">Website&nbsp;by</p>
